@@ -7,6 +7,7 @@ edition = "2021"
 
 [dependencies]
 anyhow = "1.0.93"
+dashmap = "6.1.0"
 humantime = "2.1.0"
 jsonwebtoken = "9.3.0"
 oneshot = "0.1.8"
