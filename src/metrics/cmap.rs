@@ -5,19 +5,19 @@ use std::fmt::Formatter;
 use std::sync::Arc;
 
 #[derive(Debug, Clone)]
-pub struct Metrics2 {
+pub struct CmapMetrics {
     pub data: Arc<DashMap<String, i64>>,
 }
 
-impl Default for Metrics2 {
+impl Default for CmapMetrics {
     fn default() -> Self {
         Self::new()
     }
 }
 
-impl Metrics2 {
+impl CmapMetrics {
     pub fn new() -> Self {
-        Metrics2 {
+        CmapMetrics {
             data: Arc::new(DashMap::new()),
         }
     }
@@ -29,7 +29,7 @@ impl Metrics2 {
     }
 }
 
-impl fmt::Display for Metrics2 {
+impl fmt::Display for CmapMetrics {
     fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
         for entry in self.data.iter() {
             writeln!(f, "{}: {}", entry.key(), entry.value())?;

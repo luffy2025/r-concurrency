@@ -5,19 +5,19 @@ use std::fmt::Formatter;
 use std::sync::{Arc, RwLock};
 
 #[derive(Debug, Clone)]
-pub struct Metrics {
+pub struct RwMetrics {
     pub data: Arc<RwLock<HashMap<String, i64>>>,
 }
 
-impl Default for Metrics {
+impl Default for RwMetrics {
     fn default() -> Self {
         Self::new()
     }
 }
 
-impl Metrics {
+impl RwMetrics {
     pub fn new() -> Self {
-        Metrics {
+        RwMetrics {
             data: Arc::new(RwLock::new(HashMap::new())),
         }
     }
@@ -43,7 +43,7 @@ impl Metrics {
     }
 }
 
-impl fmt::Display for Metrics {
+impl fmt::Display for RwMetrics {
     fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
         let data = self.data.read().map_err(|_e| fmt::Error)?;
         for (key, value) in data.iter() {
