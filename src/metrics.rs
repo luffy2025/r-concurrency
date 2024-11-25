@@ -1,5 +1,7 @@
 use anyhow::Result;
 use std::collections::HashMap;
+use std::fmt;
+use std::fmt::Formatter;
 use std::sync::{Arc, RwLock};
 
 #[derive(Debug, Clone)]
@@ -38,5 +40,15 @@ impl Metrics {
             .read()
             .map_err(|e| anyhow::anyhow!(e.to_string()))?
             .clone())
+    }
+}
+
+impl fmt::Display for Metrics {
+    fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
+        let data = self.data.read().map_err(|_e| fmt::Error)?;
+        for (key, value) in data.iter() {
+            writeln!(f, "{}: {}", key, value)?;
+        }
+        Ok(())
     }
 }
