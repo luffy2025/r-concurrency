@@ -7,11 +7,28 @@ All notable changes to this project will be documented in this file. See [conven
 
 ### Features
 
+- add metrics to learning sync::mutex - ([8c2c322](https://github.com/luffy2025/r-concurrency/commit/8c2c322b878dbd9d6a2bceb4e20b1e9e1b2124d2)) - Luffy2025
+- update Mutex to RwLock - ([722c917](https://github.com/luffy2025/r-concurrency/commit/722c917a19496087171ca5942c0842f86853f423)) - Luffy2025
+- add display and print it - ([1c03243](https://github.com/luffy2025/r-concurrency/commit/1c0324393d1efe852380db0ac75f4d553b0f557a)) - Luffy2025
+- supprot DashMap - ([d3bddd2](https://github.com/luffy2025/r-concurrency/commit/d3bddd2e19e85dbd02d8ccb13092e5e5b609462a)) - Luffy2025
+- use atomic in lockless HashMap - ([6f53266](https://github.com/luffy2025/r-concurrency/commit/6f5326628a644c2b382f3bc7c51b92bd7d8015ef)) - Luffy2025
+- add tcp server of redis to receive the commands from redis-cli - ([b770101](https://github.com/luffy2025/r-concurrency/commit/b770101fe8d117314ab02d60bff5d03716e66c5e)) - Luffy2025
+
+### Refactoring
+
+- add dir metrics - ([034cc38](https://github.com/luffy2025/r-concurrency/commit/034cc383fc6346da5dd0caa54b8d8b8c3c519507)) - Luffy2025
+
+---
+## [2-2-matrix-threads](https://github.com/luffy2025/r-concurrency/compare/v2-1-thread-1..v2-2-matrix-threads) - 2024-11-24
+
+### Features
+
 - add matrix - ([2e61687](https://github.com/luffy2025/r-concurrency/commit/2e61687524e8c2963a9e75f8ba3d8a38c9ad080e)) - Luffy2025
 
 ### Refactoring
 
 - add fn dot_product() - ([c4fe8d5](https://github.com/luffy2025/r-concurrency/commit/c4fe8d570bc8eb62e21fadd81d755af11b946c33)) - Luffy2025
+- make matrix multiply to be concurrency with threads - ([9d7118c](https://github.com/luffy2025/r-concurrency/commit/9d7118c7d015d01a4ce488a75bbef37b36a58831)) - Luffy2025
 
 ---
 ## [2-1-thread-1] - 2024-11-23
